@@ -9,6 +9,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import LinkDropDown from "./LinkDropDown";
 import { IoHeadsetSharp } from "react-icons/io5";
 import { MdShoppingCart } from "react-icons/md";
+import ClickDropDown from "./ClickDropDown";
 
 type Props = {
   isTopOfPage: boolean;
@@ -23,15 +24,22 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
   const styleImg = `max-w-[120px] max-h-16`;
 
   const [isMenuOpen, setMenuOpen] = useState<boolean>(false);
+  const [isSearchBarOpen, setSearchBarOpen] = useState<boolean>(false);
+  const [isClick, setClick] = useState<boolean>(false);
 
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
   };
 
+  const handleSearch = () => {
+    setSearchBarOpen(true);
+    setClick(!isClick);
+  };
+
   return (
     <nav>
       <div
-        className={`${navbarBackground} ${flexBetween} max-h- fixed max-h- flex flex-row justify-between top-0 z-30  w-full `}
+        className={`${navbarBackground} ${flexBetween} max-h-[100px] fixed flex flex-row justify-between top-0 z-30  w-full `}
       >
         <div className="flex items-center justify-start ml-7 w-5/6">
           <div className="flex items-center justify-between w-full gap-3">
@@ -87,13 +95,26 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
                   </div>
 
                   {/* LAST ROW  */}
-                  <div className="flex items-center justify-between space-x-14">
-                    <a
-                      href="#"
-                      className="text-black hover:text-gray-400 mx-2 font-bold mr-0"
-                    >
-                      <FaSearch />
-                    </a>
+                  <div className="flex items-center justify-end space-x-10">
+                    {isClick ? (
+                      <div
+                        className="cursor-pointer font-bold text-lg"
+                        onClick={() => {
+                          setSearchBarOpen(!isSearchBarOpen);
+                          setClick(!isClick);
+                        }}
+                      >
+                        <XMarkIcon className="h-6 w-6 text-gray-500" />
+                      </div>
+                    ) : (
+                      <a
+                        className="text-black hover:text-gray-400 mx-2 font-bold flex-grow text-center"
+                        onClick={handleSearch}
+                      >
+                        <FaSearch />
+                      </a>
+                    )}
+
                     <a
                       href="#"
                       className="text-black hover:text-gray-400 mx-2 font-bold flex-grow text-center"
@@ -184,6 +205,11 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
             </div>
           </motion.div>
         </AnimatePresence>
+      )}
+
+      {/* Search Dropdown  */}
+      {isSearchBarOpen && (
+        <ClickDropDown  />
       )}
     </nav>
   );
