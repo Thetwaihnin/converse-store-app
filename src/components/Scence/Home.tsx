@@ -1,5 +1,6 @@
 // import { Link } from "react-router-dom"
 import KarinaConverse from "../../assets/karina_converse.jpg";
+import NewArrival from "./home/NewArrival";
 import ShopByStyle from "./home/ShopByStyle";
 
 const Home = () => {
@@ -25,6 +26,9 @@ const Home = () => {
       </div>
       <div className="mt-12">
         <ShopByStyle/>
+      </div>
+      <div className="mt-12">
+        <NewArrival/>
       </div>
     </div>
   //  

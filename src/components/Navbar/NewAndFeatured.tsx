@@ -24,12 +24,25 @@ const NewAndFeatured = () => {
                 Women's New Arrival
               </Link>
             </li>
-            <li className="mb-2 font-normal transition-colors duration-300 link2">
-              Men's New Arrival
+            <li className="mb-2 font-normal link1">
+              <Link
+                to="/menNewArrival"
+                className="hover:text-gray-400 transition-colors duration-300"
+              >
+                Men's New Arrival
+              </Link>
             </li>
-            <li className="mb-2 font-normal transition-colors duration-300 link3">
+            <li className="mb-2 font-normal link1">
+              <Link
+                to="/menNewArrival"
+                className="hover:text-gray-400 transition-colors duration-300"
+              >
+                Kids' New Arrival
+              </Link>
+            </li>
+            {/* <li className="mb-2 font-normal transition-colors duration-300 link3">
               Kids' New Arrival
-            </li>
+            </li> */}
             <li className="mb-2 font-normal transition-colors duration-300 link4">
               Style Series
             </li>

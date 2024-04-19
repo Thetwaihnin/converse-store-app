@@ -24,16 +24,6 @@ const shoes: Shoe[] = [
   { name: "Chunk", image: Shoe3 },
 ];
 
-// const options = {
-//   loop: true,
-//   margin: 10,
-//   responsive: {
-//     0: { items: 1 },
-//     600: { items: 3 },
-//     1000: { items: 5 },
-//   },
-// };
-
 const ShopByStyle = () => {
   const options = {
     loop: true,
@@ -42,14 +32,25 @@ const ShopByStyle = () => {
     autoplayTimeout: 3000,
     nav: false, 
     dots: false,
+    responsive: {
+      0: {
+        items: 1 
+      },
+      576: {
+        items: 3 
+      }
+      
+    }
   };
 
   return (
+    <>
+    <div className="text-3xl font-bold ml-4 font-serif">Shop By Style</div>
     <div className="mt-10 h-[500px] w-full overflow-x-auto overflow-y-hidden">
       <OwlCarousel className="owl-theme" {...options}>
         {shoes.map((item: Shoe, index) => (
           <div
-            className="relative mx-5 inline-block h-[450px] w-[450px] item"
+            className="relative mx-5 inline-block h-[450px] w-[450px] item xs:h-full xs:w-full"
             key={`${item.name}-${index}`}
           >
             <p className="mb-12">{item.name}</p>
@@ -62,6 +63,7 @@ const ShopByStyle = () => {
         ))}
       </OwlCarousel>
     </div>
+    </>
   );
 };
 
