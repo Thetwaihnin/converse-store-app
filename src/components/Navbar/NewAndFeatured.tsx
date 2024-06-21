@@ -3,7 +3,7 @@ import Insole from "../../assets/insole comfort.jpg";
 import Valentine from "../../assets/Valentine converse.jpg";
 import WhiteConverse from "../../assets/WhiteConverse.jpg";
 import Converse from "../../assets/converse.jpg";
-import Fifty from "../../assets/fifty.jpg"
+import Fifty from "../../assets/fifty.jpg";
 
 const NewAndFeatured = () => {
   // const hoverLink = {
@@ -18,8 +18,8 @@ const NewAndFeatured = () => {
             <li className="text-2xl mb-4">What's New</li>
             <li className="mb-2 font-normal link1">
               <Link
-                to="/women"
-                className="hover:text-gray-400 transition-colors duration-300"
+                to="/new&featured/women"
+                className="hover:text-blue-500 transition-colors duration-300"
               >
                 Women's New Arrival
               </Link>
@@ -27,7 +27,7 @@ const NewAndFeatured = () => {
             <li className="mb-2 font-normal link1">
               <Link
                 to="/menNewArrival"
-                className="hover:text-gray-400 transition-colors duration-300"
+                className="hover:text-blue-500 transition-colors duration-300"
               >
                 Men's New Arrival
               </Link>
@@ -35,22 +35,34 @@ const NewAndFeatured = () => {
             <li className="mb-2 font-normal link1">
               <Link
                 to="/menNewArrival"
-                className="hover:text-gray-400 transition-colors duration-300"
+                className="hover:text-blue-500 transition-colors duration-300"
               >
                 Kids' New Arrival
               </Link>
             </li>
-            {/* <li className="mb-2 font-normal transition-colors duration-300 link3">
-              Kids' New Arrival
-            </li> */}
-            <li className="mb-2 font-normal transition-colors duration-300 link4">
-              Style Series
+            <li className="mb-2 font-normal link1">
+              <Link
+                to="/styleSeries"
+                className="hover:text-blue-500 transition-colors duration-300"
+              >
+                Style Series
+              </Link>
             </li>
-            <li className="mb-2 font-normal transition-colors duration-300 link5 ">
-              Counter Climate
+            <li className="mb-2 font-normal link1">
+              <Link
+                to="/counter/climate"
+                className="hover:text-blue-500 transition-colors duration-300"
+              >
+                Counter Climate
+              </Link>
             </li>
-            <li className="font-normal transition-colors duration-300 link6">
-              Crafted in Italy
+            <li className="mb-2 font-normal link1">
+              <Link
+                to="/craftedInItaly"
+                className="hover:text-blue-500 transition-colors duration-300"
+              >
+                Crafted in Italy
+              </Link>
             </li>
           </ul>
         </div>
@@ -60,14 +72,29 @@ const NewAndFeatured = () => {
             <li className="text-[18px] mb-3">
               <div>Converse Colors</div>
             </li>
-            <li className="mb-2 font-normal transiton-colors duration-300">
-              Get Inspired
+            <li className="mb-2 font-normal link1">
+              <Link
+                to="/getinspired"
+                className=" hover:text-blue-500 hover:text-[17px] transition-colors duration-300"
+              >
+                Get Inspired
+              </Link>
             </li>
-            <li className="mb-2 font-normal transiton-colors duration-300">
-              Shop
+            <li className="mb-2 font-normal link1">
+              <Link
+                to="/newfeatured/shop"
+                className=" hover:text-blue-500 hover:text-[17px] transition-colors duration-300"
+              >
+                Shop
+              </Link>
             </li>
-            <li className="mb-2 font-normal transiton-colors duration-300">
-              Customize
+            <li className="mb-2 font-normal link1">
+              <Link
+                to="/newfeatured/customize"
+                className=" hover:text-blue-500 hover:text-[17px] transition-colors duration-300"
+              >
+                Customize
+              </Link>
             </li>
           </ul>
         </div>
@@ -130,20 +157,71 @@ const NewAndFeatured = () => {
         <div className="div2 flex flex-col">
           <div className="mb-6">
             <div className="text-2xl mb-4">Featured</div>
-            <div className="font-normal mb-2">Create Next</div>
-            <div className="font-normal mb-2">Converse All Stars</div>
-            <div className="font-normal mb-2">Pride</div>
+            <div>
+              <ul>
+                <li className="mb-2 font-normal link1">
+                  <Link
+                    to="/newfeatured/createnext"
+                    className=" hover:text-blue-500 hover:text-[17px] transition-colors duration-300"
+                  >
+                    Create Next
+                  </Link>
+                </li>
+                <li className="mb-2 font-normal link1">
+                  <Link
+                    to="/newfeatured/converse/allstars"
+                    className=" hover:text-blue-500 hover:text-[17px] transition-colors duration-300"
+                  >
+                    Converse All Stars
+                  </Link>
+                </li>
+                <li className="mb-2 font-normal link1">
+                  <Link
+                    to="/newfeatured/pride"
+                    className=" hover:text-blue-500 hover:text-[17px] transition-colors duration-300"
+                  >
+                    Pride
+                  </Link>
+                </li>
+              </ul>
+            </div>
           </div>
 
           <div>
             <div className="text-[20px] mb-4">Skateboating</div>
-            <div className="font-normal mb-2">Skate Latest</div>
-            <div className="font-normal mb-2">Shop</div>
+            <ul>
+              <li className="mb-3 font-normal link1">
+                <Link
+                  to="/newfeatured/skate/latest"
+                  className=" hover:text-blue-500 hover:text-[17px] transition-colors duration-300"
+                >
+                  Skate Latest
+                </Link>
+              </li>
+              <li className="mb-4 font-normal link1">
+                <Link
+                  to="/newfeatured/skateboating/shop"
+                  className=" hover:text-blue-500 hover:text-[17px] transition-colors duration-300"
+                >
+                  Shop
+                </Link>
+              </li>
+              
+            </ul>
           </div>
 
-          <div className="mt-6">
+          <div className="mt-8">
             <div className="text-[20px] mb-4">Basketball</div>
-            <div className="font-normal ">Shop</div>
+            <ul>
+            <li className="mb-4 font-normal link1">
+                <Link
+                  to="/newfeatured/basketball/shop"
+                  className=" hover:text-blue-500 hover:text-[17px] transition-colors duration-300"
+                >
+                  Shop
+                </Link>
+              </li>
+            </ul>
           </div>
         </div>
       </div>

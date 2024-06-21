@@ -1,21 +1,24 @@
 import useMediaQuery from "../../hooks/useMediaQuery";
 import Logo from "../../assets/pngwing.com.png";
 import { SelectedPage } from "../../Shared/type";
-import Link from "./LInk";
+import LInk from "./LInk";
 import { FaBars, FaSearch } from "react-icons/fa";
 import { useState } from "react";
 import { XMarkIcon } from "@heroicons/react/16/solid";
 import { motion, AnimatePresence } from "framer-motion";
 import LinkDropDown from "./LinkDropDown";
-import { IoHeadsetSharp } from "react-icons/io5";
+// import { IoHeadsetSharp } from "react-icons/io5";
 import { MdShoppingCart } from "react-icons/md";
 import ClickDropDown from "./ClickDropDown";
+import { BsPerson } from "react-icons/bs";
+import Login from "./SignIn/Login";
+import { Link } from "react-router-dom";
 
 type Props = {
   isTopOfPage: boolean;
   selectedPage: SelectedPage;
   setSelectedPage: (value: SelectedPage) => void;
-};
+  };
 
 const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
   const flexBetween = `flex items-center justify-between`;
@@ -26,7 +29,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
   const [isMenuOpen, setMenuOpen] = useState<boolean>(false);
   const [isSearchBarOpen, setSearchBarOpen] = useState<boolean>(false);
   const [isClick, setClick] = useState<boolean>(false);
-
+  const [isLogin, setLogin] = useState<boolean>(false);
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
   };
@@ -34,6 +37,10 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
   const handleSearch = () => {
     setSearchBarOpen(true);
     setClick(!isClick);
+  };
+
+  const handleLogin = () => {
+    setLogin(!isLogin);
   };
 
   return (
@@ -47,11 +54,13 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
               <>
                 <div className={`${flexBetween} w-full`}>
                   <div>
-                    <img
-                      src={Logo}
-                      alt="converse-logo"
-                      className={`${styleImg}`}
-                    />
+                    <Link to="/home">
+                      <img
+                        src={Logo}
+                        alt="converse-logo"
+                        className={`${styleImg}`}
+                      />
+                    </Link>
                   </div>
 
                   {/* LINK DROPDOWN  */}
@@ -115,12 +124,13 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
                       </a>
                     )}
 
-                    <a
-                      href="#"
-                      className="text-black hover:text-gray-400 mx-2 font-bold flex-grow text-center"
+                    <Link 
+                      to="/login"
+                      className="text-black text-2xl hover:text-gray-400 mx-2 font-bold flex-grow text-center"
+                      onClick={handleLogin}
                     >
-                      <IoHeadsetSharp />
-                    </a>
+                      <BsPerson />
+                    </Link>
                     <a
                       href="#"
                       className="text-black hover:text-gray-400 mx-2 font-bold"
@@ -166,38 +176,38 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
             </div>
 
             <div className="flex ml-3 flex-col gap-4 text-[24px] font-serif mt-5">
-              <Link
+              <LInk
                 page="New & Featured"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
               />
 
-              <Link
+              <LInk
                 page="Women"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
               />
-              <Link
+              <LInk
                 page="Men"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
               />
-              <Link
+              <LInk
                 page="Kids"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
               />
-              <Link
+              <LInk
                 page="Custom"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
               />
-              <Link
+              <LInk
                 page="Launch"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
               />
-              <Link
+              <LInk
                 page="SALE"
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage}
@@ -208,9 +218,10 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
       )}
 
       {/* Search Dropdown  */}
-      {isSearchBarOpen && (
-        <ClickDropDown  />
-      )}
+      {isSearchBarOpen && <ClickDropDown />}
+
+      {/* Login Form  */}
+      {isLogin && <Login />}
     </nav>
   );
 };

@@ -2,6 +2,7 @@ import RedConverse from "../../assets/RedConverse.jpg";
 import CustomNew from "../../assets/new in custom.jpg";
 import KidBoot from "../../assets/kids boot.webp";
 import Easyon from "../../assets/easy-on.webp";
+import { Link } from "react-router-dom";
 
 const KidsNav = () => {
   return (
@@ -12,36 +13,170 @@ const KidsNav = () => {
         <div className="a basis-1/3">
           <div className="text-2xl mb-2">Trending</div>
           <ul className="text-sm py-4">
-            <li className="font-normal mb-2">Explore Kids</li>
-            <li className="font-normal mb-2">New Arrivals</li>
-            <li className="font-normal mb-2">Shoes under €55</li>
-            <li className="font-normal mb-2">Sale</li>
+            <li className="mb-3 font-normal link1">
+              <Link
+                to="/kids/sale"
+                className="hover:text-blue-500 hover:text-[17px] transition-colors duration-300"
+              >
+                Explore Kids
+              </Link>
+            </li>
+            <li className="mb-3 font-normal link1">
+              <Link
+                to="/kids/newArrival"
+                className="hover:text-blue-500 hover:text-[17px] transition-colors duration-300"
+              >
+                New Arrival
+              </Link>
+            </li>
+            <li className="mb-3 font-normal link1">
+              <Link
+                to="/kids/shoesUnder/55"
+                className="hover:text-blue-500 hover:text-[17px] transition-colors duration-300"
+              >
+                Shoes under $55
+              </Link>
+            </li>
+            <li className="mb-3 font-normal link1">
+              <Link
+                to="/kids/sales"
+                className="hover:text-blue-500 hover:text-[17px] transition-colors duration-300"
+              >
+                Sales
+              </Link>
+            </li>
           </ul>
         </div>
         {/* SECOND  */}
         <div className="a basis-3/6 flex flex-row">
-          <div>
+          <div className=" mr-5">
             <div className="text-2xl mb-2">By Age/Gender</div>
             <ul className="text-sm py-4">
-              <li className="font-normal mb-2">Babies & Toddlers(Age 0-4)</li>
-              <li className="font-normal mb-2">Little Kids(Age 4-8)</li>
-              <li className="font-normal mb-2">Big Kids(Age 8-12)</li>
-              <li className="font-normal mb-2">Boys</li>
-              <li className="font-normal mb-2">Girls</li>
-              <li className="font-normal mb-2">Kids Size Guide</li>
+              <li className="mb-3 font-normal link1">
+                <Link
+                  to="/kids/babies/toddlers"
+                  className="hover:text-blue-500 hover:text-[14px] transition-colors duration-300"
+                >
+                  Babies & Toddlers(Age 0-4)
+                </Link>
+              </li>
+              <li className="mb-3 font-normal link1">
+                <Link
+                  to="/kids/sales"
+                  className="hover:text-blue-500 hover:text-[17px] transition-colors duration-300"
+                >
+                  Little Kids(Age 4-8)
+                </Link>
+              </li>
+              <li className="mb-3 font-normal link1">
+                <Link
+                  to="/kids/big/kids"
+                  className="hover:text-blue-500 hover:text-[17px] transition-colors duration-300"
+                >
+                  Big Kids(Age 8-12)
+                </Link>
+              </li>
+              <li className="mb-3 font-normal link1">
+                <Link
+                  to="/kids/boys"
+                  className="hover:text-blue-500 hover:text-[17px] transition-colors duration-300"
+                >
+                  Boys
+                </Link>
+              </li>
+              <li className="mb-3 font-normal link1">
+                <Link
+                  to="/kids/girls"
+                  className="hover:text-blue-500 hover:text-[17px] transition-colors duration-300"
+                >
+                  Girls
+                </Link>
+              </li>
+              <li className="mb-3 font-normal link1">
+                <Link
+                  to="/kids/size/guide"
+                  className="hover:text-blue-500 hover:text-[17px] transition-colors duration-300"
+                >
+                  Kids Size Guide
+                </Link>
+              </li>
+              <li className="mb-3 font-normal link1">
+                <Link
+                  to="/kids/sales"
+                  className="hover:text-blue-500 hover:text-[17px] transition-colors duration-300"
+                >
+                  Sales
+                </Link>
+              </li>
             </ul>
           </div>
-          <div className="ml-6">
+          <div className="ml-8">
             <div className="text-2xl mb-2 ">Shoes</div>
             <ul className="text-sm py-4">
-              <li className="font-normal mb-2">All Shoes</li>
-              <li className="font-normal mb-2">High Top</li>
-              <li className="font-normal mb-2">Low Top</li>
-              <li className="font-normal mb-2">Platform</li>
-              <li className="font-normal mb-2">Boot</li>
-              <li className="font-normal mb-2">Easy-on Easy-off</li>
-              <li className="font-normal mb-2">Kids' Prints</li>
-              <li className="font-normal mb-2">Custom</li>
+              <li className="mb-3 font-normal link1">
+                <Link
+                  to="/kids/sales"
+                  className="hover:text-blue-500 hover:text-[17px] transition-colors duration-300"
+                >
+                  Sales
+                </Link>
+              </li>
+              <li className="mb-3 font-normal link1">
+                <Link
+                  to="/kids/high/top"
+                  className="hover:text-blue-500 hover:text-[17px] transition-colors duration-300"
+                >
+                  High Top
+                </Link>
+              </li>
+              <li className="mb-3 font-normal link1">
+                <Link
+                  to="/kids/low/top"
+                  className="hover:text-blue-500 hover:text-[17px] transition-colors duration-300"
+                >
+                  Low Top
+                </Link>
+              </li>
+              <li className="mb-3 font-normal link1">
+                <Link
+                  to="/kids/platform"
+                  className="hover:text-blue-500 hover:text-[17px] transition-colors duration-300"
+                >
+                  Platform
+                </Link>
+              </li>
+              <li className="mb-3 font-normal link1">
+                <Link
+                  to="/kids/boot"
+                  className="hover:text-blue-500 hover:text-[17px] transition-colors duration-300"
+                >
+                  Boots
+                </Link>
+              </li>
+              <li className="mb-3 font-normal link1">
+                <Link
+                  to="/kids/easy-on/easy-off"
+                  className="hover:text-blue-500 hover:text-[17px] transition-colors duration-300"
+                >
+                  Easy-on Easy-off
+                </Link>
+              </li>
+              <li className="mb-3 font-normal link1">
+                <Link
+                  to="/kids/prints"
+                  className="hover:text-blue-500 hover:text-[17px] transition-colors duration-300"
+                >
+                  Kids Prints
+                </Link>
+              </li>
+              <li className="mb-3 font-normal link1">
+                <Link
+                  to="/kids/custom"
+                  className="hover:text-blue-500 hover:text-[17px] transition-colors duration-300"
+                >
+                  Custom
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
@@ -50,9 +185,30 @@ const KidsNav = () => {
           <div>
             <div className="text-2xl mb-2">Clothings & Accessories</div>
             <ul className="text-sm py-4">
-              <li className="font-normal mb-2">All Clothings</li>
-              <li className="font-normal mb-2">Shorts & Pants</li>
-              <li className="font-normal mb-2">Tops & T-Shirts</li>
+              <li className="mb-3 font-normal link1">
+                <Link
+                  to="/kids/all/clothings"
+                  className="hover:text-blue-500 hover:text-[17px] transition-colors duration-300"
+                >
+                  All Clothings
+                </Link>
+              </li>
+              <li className="mb-3 font-normal link1">
+                <Link
+                  to="/kids/shorts/pants"
+                  className="hover:text-blue-500 hover:text-[17px] transition-colors duration-300"
+                >
+                  Shorts & Pants
+                </Link>
+              </li>
+              <li className="mb-3 font-normal link1">
+                <Link
+                  to="/kids/tops/shirts"
+                  className="hover:text-blue-500 hover:text-[17px] transition-colors duration-300"
+                >
+                  Tops & T-Shirt
+                </Link>
+              </li>
             </ul>
           </div>
         </div>

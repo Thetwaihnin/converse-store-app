@@ -2,6 +2,7 @@ import YellowConverse from "../../assets/converse 2.jpg";
 import Valentine from "../../assets/Valentine converse.jpg";
 import Black from "../../assets/Black.webp";
 import Color from "../../assets/colorful.jpg";
+import { Link } from "react-router-dom";
 
 const WomenNav = () => {
   return (
@@ -12,36 +13,204 @@ const WomenNav = () => {
         <div className="a basis-1/3">
           <div className="text-2xl mb-2">Trending</div>
           <ul className="text-sm py-4">
-            <li className="font-normal mb-2">Best Sellers</li>
-            <li className="font-normal mb-2">New Arrivals</li>
-            <li className="font-normal mb-2">Converse Exclusive</li>
-            <li className="font-normal mb-2">Comme Des Garcons</li>
-            <li className="font-normal mb-2">Crafted in Italy</li>
-            <li className="font-normal mb-2">Neutral Tones</li>
-            <li className="font-normal mb-2">Leather & Seude</li>
-            <li className="font-normal mb-2">Black & White Essentials</li>
-            <li className="font-normal mb-2">Shoe Under €75</li>
-            <li className="font-normal mb-2">Sale</li>
+            <li className="mb-3 font-normal link1">
+              <Link
+                to="/women/sale"
+                className="hover:text-blue-500 hover:text-[17px] transition-colors duration-300"
+              >
+                Best Sellers
+              </Link>
+            </li>
+            <li className="mb-3 font-normal link1">
+              <Link
+                to="/women/new/arrival"
+                className="hover:text-blue-500 hover:text-[17px] transition-colors duration-300"
+              >
+                New Arrivals
+              </Link>
+            </li>
+            <li className="mb-3 font-normal link1">
+              <Link
+                to="/women/converse/exclusive"
+                className="hover:text-blue-500 hover:text-[17px] transition-colors duration-300"
+              >
+                Converse Exclusive
+              </Link>
+            </li>
+            <li className="mb-3 font-normal link1">
+              <Link
+                to="/women/commedesgarcons"
+                className="hover:text-blue-500 hover:text-[17px] transition-colors duration-300"
+              >
+                Comme Des Garcons
+              </Link>
+            </li>
+            <li className="mb-3 font-normal link1">
+              <Link
+                to="/women/craftedin/italy"
+                className="hover:text-blue-500 hover:text-[17px] transition-colors duration-300"
+              >
+                Crafted in Italy
+              </Link>
+            </li>
+            <li className="mb-3 font-normal link1">
+              <Link
+                to="/women/neutral/tones"
+                className="hover:text-blue-500 hover:text-[17px] transition-colors duration-300"
+              >
+                Neutral Tones
+              </Link>
+            </li>
+            <li className="mb-3 font-normal link1">
+              <Link
+                to="/women/leather/seude"
+                className="hover:text-blue-500 hover:text-[17px] transition-colors duration-300"
+              >
+                Leather & Seude
+              </Link>
+            </li>
+            <li className="mb-3 font-normal link1">
+              <Link
+                to="/women/black/white/essentials"
+                className="hover:text-blue-500 hover:text-[17px] transition-colors duration-300"
+              >
+                Black & White Essentials
+              </Link>
+            </li>
+            <li className="mb-3 font-normal link1">
+              <Link
+                to="/women/shoe/under/75"
+                className="hover:text-blue-500 hover:text-[17px] transition-colors duration-300"
+              >
+                Shoe Under €75
+              </Link>
+            </li>
+            <li className="mb-3 font-normal link1">
+              <Link
+                to="/women/sale"
+                className="hover:text-blue-500 hover:text-[17px] transition-colors duration-300"
+              >
+                Sale
+              </Link>
+            </li>
           </ul>
         </div>
         {/* SECOND  */}
         <div className="a basis-1/3">
           <div className="text-2xl mb-2">Shoes</div>
           <ul className="text-sm py-4">
-            <li className="font-normal mb-2">High Top</li>
-            <li className="font-normal mb-2">Low Top</li>
-            <li className="font-normal mb-2">Platform</li>
-            <li className="font-normal mb-2">Boot</li>
-            <li className="font-normal mb-2">Crafted in Italy</li>
-            <li className="font-normal mb-2">Classic Chunk</li>
-            <li className="font-normal mb-2">Chunk 70</li>
-            <li className="font-normal mb-2">Run Star</li>
-            <li className="font-normal mb-2">Lugged</li>
-            <li className="font-normal mb-2">One Star</li>
-            <li className="font-normal mb-2">Wide Width</li>
-            <li className="font-normal mb-2">Skateboarding</li>
-            <li className="font-normal mb-2">Basketball</li>
-            <li className="font-normal mb-2">Custom</li>
+            <li className="mb-3 font-normal link1">
+              <Link
+                to="/women/high/top"
+                className="hover:text-blue-500 hover:text-[17px] transition-colors duration-300"
+              >
+                High Top
+              </Link>
+            </li>
+            <li className="mb-3 font-normal link1">
+              <Link
+                to="/women/low/top"
+                className="hover:text-blue-500 hover:text-[17px] transition-colors duration-300"
+              >
+                Low Top
+              </Link>
+            </li>
+            <li className="mb-3 font-normal link1">
+              <Link
+                to="/women/platform"
+                className="hover:text-blue-500 hover:text-[17px] transition-colors duration-300"
+              >
+                Platform
+              </Link>
+            </li>
+            <li className="mb-3 font-normal link1">
+              <Link
+                to="/women/boot"
+                className="hover:text-blue-500 hover:text-[17px] transition-colors duration-300"
+              >
+                Boot
+              </Link>
+            </li>
+            <li className="mb-3 font-normal link1">
+              <Link
+                to="/women/craftedin/italy"
+                className="hover:text-blue-500 hover:text-[17px] transition-colors duration-300"
+              >
+                Crafted in Italy
+              </Link>
+            </li>
+            <li className="mb-3 font-normal link1">
+              <Link
+                to="/women/classic/chunks"
+                className="hover:text-blue-500 hover:text-[17px] transition-colors duration-300"
+              >
+                Classic Chunks
+              </Link>
+            </li>
+            <li className="mb-3 font-normal link1">
+              <Link
+                to="/women/chunk/70"
+                className="hover:text-blue-500 hover:text-[17px] transition-colors duration-300"
+              >
+                Chunk 70
+              </Link>
+            </li>
+            <li className="mb-3 font-normal link1">
+              <Link
+                to="/women/runstar"
+                className="hover:text-blue-500 hover:text-[17px] transition-colors duration-300"
+              >
+                Run Star
+              </Link>
+            </li>
+            <li className="mb-3 font-normal link1">
+              <Link
+                to="/women/lugged"
+                className="hover:text-blue-500 hover:text-[17px] transition-colors duration-300"
+              >
+                Lugged
+              </Link>
+            </li>
+            <li className="mb-3 font-normal link1">
+              <Link
+                to="/women/onestar"
+                className="hover:text-blue-500 hover:text-[17px] transition-colors duration-300"
+              >
+                One Star
+              </Link>
+            </li>
+            <li className="mb-3 font-normal link1">
+              <Link
+                to="/women/wide/width"
+                className="hover:text-blue-500 hover:text-[17px] transition-colors duration-300"
+              >
+                Wide Width
+              </Link>
+            </li>
+            <li className="mb-3 font-normal link1">
+              <Link
+                to="/women/skateboating"
+                className="hover:text-blue-500 hover:text-[17px] transition-colors duration-300"
+              >
+                Skateboating
+              </Link>
+            </li>
+            <li className="mb-3 font-normal link1">
+              <Link
+                to="/women/basketball"
+                className="hover:text-blue-500 hover:text-[17px] transition-colors duration-300"
+              >
+                Basketball
+              </Link>
+            </li>
+            <li className="mb-3 font-normal link1">
+              <Link
+                to="/women/custom"
+                className="hover:text-blue-500 hover:text-[17px] transition-colors duration-300"
+              >
+                Custom
+              </Link>
+            </li>
           </ul>
         </div>
         {/* THIRD  */}
@@ -49,22 +218,92 @@ const WomenNav = () => {
           <div>
             <div className="text-2xl mb-2">Clothings</div>
             <ul className="text-sm py-4">
-              <li className="font-normal mb-2">All Clothings</li>
-              <li className="font-normal mb-2">Bags & Backpacks</li>
-              <li className="font-normal mb-2">Jackets & Sweatshirts</li>
-              <li className="font-normal mb-2">Shorts & Pants</li>
-              <li className="font-normal mb-2">Winter Shop</li>
+              <li className="mb-3 font-normal link1">
+                <Link
+                  to="/women/all/clothings"
+                  className="hover:text-blue-500 hover:text-[17px] transition-colors duration-300"
+                >
+                  All Clothings
+                </Link>
+              </li>
+              <li className="mb-3 font-normal link1">
+                <Link
+                  to="/women/bags/backpacks"
+                  className="hover:text-blue-500 hover:text-[17px] transition-colors duration-300"
+                >
+                  Bags & Backpacks
+                </Link>
+              </li>
+              <li className="mb-3 font-normal link1">
+                <Link
+                  to="/women/jacket/sweatshirt"
+                  className="hover:text-blue-500 hover:text-[17px] transition-colors duration-300"
+                >
+                  Jackets & Sweatshirts
+                </Link>
+              </li>
+              <li className="mb-3 font-normal link1">
+                <Link
+                  to="/women/shorts/pants"
+                  className="hover:text-blue-500 hover:text-[17px] transition-colors duration-300"
+                >
+                  Shorts & Pants
+                </Link>
+              </li>
+              <li className="mb-3 font-normal link1">
+                <Link
+                  to="/women/winter/shop"
+                  className="hover:text-blue-500 hover:text-[17px] transition-colors duration-300"
+                >
+                  Winter Shop
+                </Link>
+              </li>
             </ul>
           </div>
           <div>
             <div>
               <div className="text-2xl mb-2">Accessories</div>
               <ul className="text-sm py-4">
-                <li className="font-normal mb-2">All Accessories</li>
-                <li className="font-normal mb-2">New Arrivals</li>
-                <li className="font-normal mb-2">Hats</li>
-                <li className="font-normal mb-2">Socks</li>
-                <li className="font-normal mb-2">Laces</li>
+                <li className="mb-3 font-normal link1">
+                  <Link
+                    to="/women/all/accessories"
+                    className="hover:text-blue-500 hover:text-[17px] transition-colors duration-300"
+                  >
+                    All Accessories
+                  </Link>
+                </li>
+                <li className="mb-3 font-normal link1">
+                  <Link
+                    to="/women/new/arrival"
+                    className="hover:text-blue-500 hover:text-[17px] transition-colors duration-300"
+                  >
+                    New Arrival
+                  </Link>
+                </li>
+                <li className="mb-3 font-normal link1">
+                  <Link
+                    to="/women/hats"
+                    className="hover:text-blue-500 hover:text-[17px] transition-colors duration-300"
+                  >
+                    Hats
+                  </Link>
+                </li>
+                <li className="mb-3 font-normal link1">
+                  <Link
+                    to="/women/socks"
+                    className="hover:text-blue-500 hover:text-[17px] transition-colors duration-300"
+                  >
+                    Socks
+                  </Link>
+                </li>
+                <li className="mb-3 font-normal link1">
+                  <Link
+                    to="/women/laces"
+                    className="hover:text-blue-500 hover:text-[17px] transition-colors duration-300"
+                  >
+                    Laces
+                  </Link>
+                </li>
               </ul>
             </div>
           </div>

@@ -2,19 +2,8 @@ import { FaSearch } from "react-icons/fa";
 
 const ClickDropDown = () => {
   return (
-    <div className="fixed inset-x-0 bottom-0 top-[60px]  bg-gray-200 bg-opacity-50 z-20 flex flex-row">
-      {/* <div className="mx-auto p-6 shadow-sm max-w-full flex flex-row bg-white rounded-lg">
-        <div className="flex-grow">
-          <input
-            type="text"
-            placeholder="Search..."
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:border-blue-500"
-          />
-        </div>
-        <button onClick={closeSearchBar}>
-          <XMarkIcon className="h-6 w-6 text-gray-500" />
-        </button>
-      </div> */}
+    <div className="fixed inset-x-0 bottom-0 top-[50px]  bg-gray-200 bg-opacity-50 z-20 flex flex-row">
+      
       <div className="w-[50%]"></div>
       <div className="relative w-[50%] bg-white">
         <div className=" mt-16">
