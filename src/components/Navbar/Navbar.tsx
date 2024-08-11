@@ -131,12 +131,12 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
                     >
                       <BsPerson />
                     </Link>
-                    <a
-                      href="#"
+                    <Link
+                      to="/cart"
                       className="text-black hover:text-gray-400 mx-2 font-bold"
                     >
                       <MdShoppingCart />
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </>

@@ -8,64 +8,66 @@ import Shoe7 from "../../../assets/shoes/valentine.webp";
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
+import { Link } from "react-router-dom";
 
 export type Shoe = {
   name: string;
   image: string;
+  url: string;
 };
 
 const shoes: Shoe[] = [
-  { name: "Boots", image: Shoe6 },
-  { name: "High Top", image: Shoe2 },
-  { name: "Launch", image: Shoe7 },
-  { name: "Custom", image: Shoe4 },
-  { name: "Low", image: Shoe1 },
-  { name: "Easy-on", image: Shoe5 },
-  { name: "Chunk", image: Shoe3 },
+  { name: "Boots", image: Shoe6, url: "/boots" },
+  { name: "High Top", image: Shoe2, url: "/hightop" },
+  { name: "Launch", image: Shoe7, url: "/launch" },
+  { name: "Custom", image: Shoe4, url: "/custom" },
+  { name: "Platform", image: Shoe1, url: "/platform" },
+  { name: "Easy-on", image: Shoe5, url: "/easyon" },
+  { name: "Chunk", image: Shoe3, url: "/chunk" },
 ];
 
 const ShopByStyle = () => {
   const options = {
     loop: true,
     margin: 10,
-    autoplay: true, 
+    autoplay: true,
     autoplayTimeout: 3000,
-    nav: false, 
+    nav: false,
     dots: false,
     responsive: {
       0: {
-        items: 1 
+        items: 1,
       },
       576: {
-        items: 3 
-      }
-      
-    }
+        items: 3,
+      },
+    },
   };
 
   return (
     <>
-    <div className="text-3xl font-bold ml-4 font-serif">Shop By Style</div>
-    <div className="mt-10 h-[500px] w-full overflow-x-auto overflow-y-hidden">
-      <OwlCarousel className="owl-theme" {...options}>
-        {shoes.map((item: Shoe, index) => (
-          <div
-            className="relative mx-5 inline-block h-[450px] w-[450px] item xs:h-full xs:w-full"
-            key={`${item.name}-${index}`}
-          >
-            <p className="mb-12">{item.name}</p>
-            <img
-              src={item.image}
-              alt={item.name}
-              className="h-[400px] w-full"
-            />
-          </div>
-        ))}
-      </OwlCarousel>
-    </div>
+      <div className="text-3xl font-bold ml-4 font-serif">Shop By Style</div>
+      <div className="mt-10 h-[500px] w-full overflow-x-auto overflow-y-hidden">
+        <OwlCarousel className="owl-theme" {...options}>
+          {shoes.map((item: Shoe, index) => (
+            <div
+              className="relative mx-5 inline-block h-[450px] w-[450px] item xs:h-full xs:w-full"
+              key={`${item.name}-${index}`}
+            >
+              <p className="mb-12">{item.name}</p>
+              <Link to={item.url}>
+                <img
+                  src={item.image}
+                  alt={item.name}
+                  className="h-[400px] w-full"
+                />
+              </Link>
+            </div>
+          ))}
+        </OwlCarousel>
+      </div>
     </>
   );
 };
 
 export default ShopByStyle;
-
