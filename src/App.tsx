@@ -5,6 +5,7 @@ import {
   useLocation,
   Navigate,
 } from "react-router-dom";
+
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./components/Scence/Home";
 import Cart from "./components/Cart/Cart";
@@ -58,7 +59,7 @@ const App = () => {
         <Route path="/platform" element={<Platform />} />
         <Route path="/shoes/:shoeId" element={<Detail />} />
         <Route path="/hightop/:shoeId" element={<HightopDetail />} />
-        <Route path="*" element={<Navigate to="/login" />} />{" "}
+        {/* <Route path="*" element={<Navigate to="/login" />} />{" "} */}
       </Routes>
       {isLoginPage && <Login />}{" "}
     </div>

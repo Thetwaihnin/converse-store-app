@@ -23,13 +23,14 @@ type Props = {
 const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
   const flexBetween = `flex items-center justify-between`;
   const isAboveMediumScreens = useMediaQuery("(min-width: 760px)");
-  const navbarBackground = isTopOfPage ? "" : " border-b-2 bg-white";
+  const navbarBackground = isTopOfPage ? "" : " border-b-2 bg-blue-50";
   const styleImg = `max-w-[120px] max-h-16`;
 
   const [isMenuOpen, setMenuOpen] = useState<boolean>(false);
   const [isSearchBarOpen, setSearchBarOpen] = useState<boolean>(false);
   const [isClick, setClick] = useState<boolean>(false);
   const [isLogin, setLogin] = useState<boolean>(false);
+  
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
   };
@@ -166,7 +167,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: "100%" }}
             transition={{ duration: 0.5, ease: "easeInOut" }}
-            className="fixed left-0 bottom-0 z-40 h-full w-full bg-white"
+            className="fixed left-0 bottom-0 z-40 h-full w-full bg-blue-50"
           >
             {/* Close Icon  */}
             <div className="flex justify-end p-5">

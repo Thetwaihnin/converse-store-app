@@ -4,14 +4,11 @@ import { Link } from "react-router-dom";
 // import { Shoe } from "../../shoes/shoeData";
 import { useCart } from "../../Context/CartProvider";
 
-// interface CartProps {
-//   cartItem: Shoe[];
-// }
-
 const Cart = () => {
   const { cartItem } = useCart();
-
   const count = cartItem.length;
+  
+  const totalSum = cartItem.reduce((sum, item) => sum + item.price, 0);
 
   let shippingValue = 15;
   let tax = 2;
@@ -50,8 +47,8 @@ const Cart = () => {
               <p className="text-2xl font-bold">ORDER SUMMARY</p>
               <div className="mt-6">
                 <div className="flex justify-between">
-                  <p className="text-[18px]">Subtotal</p>
-                  <p className="text-[18px]">$0.00</p>
+                  <p className="text-[18px]">SubTotal</p>
+                  <p className="text-[18px]">${totalSum}</p>
                 </div>
                 <div className="mt-6 flex justify-between">
                   <p className="text-[18px]">Shipping</p>
@@ -64,8 +61,8 @@ const Cart = () => {
                 <hr className=" font-bold mt-8" />
 
                 <div className="mt-6 flex justify-between">
-                  <p className="font-bold text-[20px]">Est. Tax</p>
-                  <p className="font-bold text-[20px]">$0.00</p>
+                  <p className="font-bold text-[20px]">Est. Value</p>
+                  <p className="font-bold text-[20px]">${totalSum + shippingValue + tax}</p>
                 </div>
 
                 <button className="mt-6 py-5 text-gray-400 text-[20px] justify-center hover:bg-blue-600 flex w-full bg-gray-300">

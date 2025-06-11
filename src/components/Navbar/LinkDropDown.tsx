@@ -75,7 +75,7 @@ const LinkDropDown = ({ page, selectedPage, setSelectedPage }: Props) => {
           className="fixed inset-0 overflow-y-auto"
           onMouseLeave={handleDropdownLeave}
         >
-          <div className={`mx-auto p-6 shadow-sm mt-14 max-w-full bg-white`}>
+          <div className={`mx-auto p-6 shadow-sm mt-14 max-w-full bg-blue-50`}>
             {getDropdownContents(page)}
           </div>
         </div>

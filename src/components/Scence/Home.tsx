@@ -14,41 +14,41 @@ const Home = () => {
           <div className="text-[14px] font-sans text-white font-bold ">
             NEW IN: DELUXE SQUARED
           </div>
-          <div className="text-3xl font-serif my-2 text-white font-bold">
+          <div className="md:text-3xl font-serif my-2 text-white font-bold">
             ALL EYES ON YOU
           </div>
-          <p className="text-white mt-4 text-center w-[30%]">
+          <p className="text-white md:text-[20px] text-[10px] md:mt-4 text-center  md:w-[30%]">
             Step into your moment-whether you prefer a subtle edge or an all out
             glam with Swarovski® crystals.
           </p>
           {/* <a href="#"> */}
-            <button id="" className="py-2 px-4 mt-4 sm:w-[100px] sm:bg-white sm:text-black xs:w-full xs:bg-black xs:text-white">Shop</button>
+            <button id="" className="py-2 px-4 mt-4 sm:w-auto bg-black text-white rounded-sm w-full md:bg-white md:text-gray-950">Shop</button>
           {/* </a> */}
         </div>
       </div>
 
-      <div className="relative mt-24">
+      <div className="relative mt-12 md:mt-24">
         <img src={KarinaTwo} alt="homeImg" className="w-full h-full" />
         <div className="absolute inset-y-0 justify-center flex flex-col items-center left-0 right-0 pb-2">
-          <div className="text-[24px] font-sans text-black font-bold ">
+          <div className="md:text-[24px] font-sans text-black font-bold ">
             Converse X Karina
           </div>
-          <div className="text-3xl font-serif my-2 text-black font-bold">
+          <div className="md:text-3xl font-serif md:my-2 text-black font-bold">
             RUN STAR TRAINER
           </div>
-          <p className="text-black mt-4 text-center w-[30%]">
+          <p className="text-black sm:text-[16px] text-[10px] md:mt-4 text-center w-full md:w-[30%]">
             Converse Star Silver Line New Siloutte
           </p>
-          <p>Run Star Trainer</p>
+          <p className="text-[10px] sm:text-[24px]">Run Star Trainer</p>
           {/* <a href="#"> */}
-            <button id="" className="py-2 px-4 mt-4 sm:w-[100px] sm:bg-black sm:text-white xs:w-full xs:bg-black xs:text-white">Shop</button>
+            <button id="" className="py-2 px-4 mt-4 sm:w-auto bg-black text-white rounded-sm w-full md:bg-white md:text-gray-950">Shop</button>
           {/* </a> */}
         </div>
       </div>
       <div className="mt-12">
         <ShopByStyle/>
       </div>
-      <div className="mt-12">
+      <div className="md:mt-64 ">
         <ShopByCategory/>
       </div>
       <div className="mt-12">

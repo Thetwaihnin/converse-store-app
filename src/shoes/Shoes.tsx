@@ -5,7 +5,7 @@ import {platformShoeData, Shoe} from "../shoes/shoeData"
 
 const Shoes = () => {
   return (
-    <div className="flex justify-evenly mt-12 flex-wrap overflow-auto no-scrollbar h-[800px]">
+    <div className="flex justify-evenly mt-12 flex-wrap overflow-auto no-scrollbar md:h-screen">
       {platformShoeData.map((item: Shoe, index) => (
         <div
           className="border h-[400px] w-64 my-3"
