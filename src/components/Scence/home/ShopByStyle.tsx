@@ -18,13 +18,13 @@ export type Shoe = {
 };
 
 const shoes: Shoe[] = [
-  { name: "Boots", image: Shoe6, url: "/boots" },
+  { name: "Boots", image: Shoe6, url: "#" },
   { name: "High Top", image: Shoe2, url: "/hightop" },
-  { name: "Launch", image: Shoe7, url: "/launch" },
-  { name: "Custom", image: Shoe4, url: "/custom" },
+  { name: "Launch", image: Shoe7, url: "#" },
+  { name: "Custom", image: Shoe4, url: "#" },
   { name: "Platform", image: Shoe1, url: "/platform" },
-  { name: "Easy-on", image: Shoe5, url: "/easyon" },
-  { name: "Chunk", image: Shoe3, url: "/chunk" },
+  { name: "Easy-on", image: Shoe5, url: "#" },
+  { name: "Chunk", image: Shoe3, url: "#" },
 ];
 
 const ShopByStyle = () => {
